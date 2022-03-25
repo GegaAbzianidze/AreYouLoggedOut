@@ -1,0 +1,21 @@
+{
+"manifest_version": 3,
+"name": "Are you logged out?",
+"description": "If you share 1 computer with your family/friends and forget to log out from social media, this extension will remind you.",
+"version": "1.0",
+"author": "OzzX",
+"icons": {
+"16": "./Icons/16.png",
+"48": "./Icons/48.png",
+"128": "./Icons/128.png"
+},
+"action": {
+"default_icon": "./Icons/48.png",
+"default_popup": "popup.html"
+},
+"content_scripts": [{
+    "run_at" :"document_end",
+    "matches": ["https://www.instagram.com/*","https://www.facebook.com/*"],
+    "js": ["script.js"]
+}]
+}

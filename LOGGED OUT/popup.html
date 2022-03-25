@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Are you logged out?</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Modal Structure */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+      html,
+      body {
+        font-family: "poppins", sans-serif;
+        font-size: 14px;
+        margin: 10;
+        min-height: 180px;
+        padding: 0;
+        width: 450px;
+      }
+
+      .Title{
+        color: rgb(0, 0, 0);
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+            flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 850%;
+        margin: 0 auto;
+      /*   padding: 2em 0em; */
+      }
+
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: #FFF;
+        padding:  40px 0px;
+        width: 240px;
+      }
+
+      h1 {
+        text-align: left;
+        color: #444;
+        letter-spacing: 0.05em;
+        margin: 0 0 0.4em;
+        font-size: 1em;
+      }
+
+      p {
+        text-align: left;
+        color: #444;
+        letter-spacing: 0.05em;
+        font-size: 0.8em;
+        margin: 0 0 2em;
+      }
+
+
+      .btn {
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 45px;
+        max-width: 160px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+      }
+      .btn:hover {
+        text-decoration: none;
+      }
+
+      /*btn_background*/
+      .effect01 {
+        color: #FFF;
+        border: 4px solid #000;
+        box-shadow:0px 0px 0px 1px #000 inset;
+        background-color: #000;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+      }
+      .effect01:hover {
+        border: 4px solid #666;
+        background-color: #FFF;
+        box-shadow:0px 0px 0px 4px #EEE inset;
+      }
+
+      /*btn_text*/
+      .effect01 span {
+        transition: all 0.2s ease-out;
+        z-index: 2;
+      }
+      .effect01:hover span{
+        letter-spacing: 0.13em;
+        color: #333;
+      }
+
+      /*highlight*/
+      .effect01:after {
+        background: #FFF;
+        border: 0px solid #000;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .8;
+        position: absolute;
+        top: -50px;
+        -webkit-transform: rotate(35deg);
+                transform: rotate(35deg);
+        width: 50px;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+        z-index: 1;
+      }
+      .effect01:hover:after {
+        background: #FFF;
+        border: 20px solid #000;
+        opacity: 0;
+        left: 120%;
+        -webkit-transform: rotate(40deg);
+                transform: rotate(40deg);
+      }
+
+      input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }
+
+      label  {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 40px;
+        height: 20px;
+        background: grey;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+      }
+
+      label:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+      }
+
+      input:checked + label {
+        background: black;
+      }
+
+      input:checked + label:after {
+        left: calc(100%);
+        transform: translateX(-100%);
+      }
+
+      label:active:after {
+        width: 130px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+   
+     
+    </div>
+    
+              </div>
+              <div class="buttons">
+                <div class="container">
+                  <h1 class="Title" style="font-size: 22.2px; font-weight: bold;">
+                    Are you logged out?
+                  </h1>
+                 
+                    <input type="checkbox" id="switch" /><label for="switch">Toggle</label><h2 style="font-size: 15px;">Enabled</h2>
+                                
+                  <h1 class="Title">
+                  </h1>
+                    <a href="./HTML/List.html" class="btn effect01" target="_blank"><span>Website List</span></a>
+                    <br/>
+                    <a href="./HTML/Settings.html" class="btn effect01" target="_blank"><span>Options</span></a>
+                </div>
+              </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
