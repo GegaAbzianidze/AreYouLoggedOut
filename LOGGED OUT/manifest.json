@@ -12,10 +12,22 @@
 "action": {
 "default_icon": "./Icons/48.png",
 "default_popup": "popup.html"
+
 },
+"options_page": "options.html",
+"permissions": [
+    "storage"
+],
+"background": {
+    "service_worker": "background.js"
+},
+"host_permissions": [
+    "https://www.instagram.com/*",
+    "https://www.facebook.com/*"
+],
 "content_scripts": [{
     "run_at" :"document_end",
     "matches": ["https://www.instagram.com/*","https://www.facebook.com/*"],
-    "js": ["script.js"]
+    "js": ["script.js","popup.js"]
 }]
 }

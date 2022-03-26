@@ -2,11 +2,10 @@
 <html>
   <head>
     <title>Are you logged out?</title>
+    
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
     />
     <style>
       /* Modal Structure */
@@ -132,49 +131,9 @@
                 transform: rotate(40deg);
       }
 
-      input[type=checkbox]{
-        height: 0;
-        width: 0;
-        visibility: hidden;
-      }
-
-      label  {
-        cursor: pointer;
-        text-indent: -9999px;
-        width: 40px;
-        height: 20px;
-        background: grey;
-        display: block;
-        border-radius: 100px;
-        position: relative;
-      }
-
-      label:after {
-        content: '';
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 20px;
-        height: 20px;
-        background: #fff;
-        border-radius: 90px;
-        transition: 0.3s;
-      }
-
-      input:checked + label {
-        background: black;
-      }
-
-      input:checked + label:after {
-        left: calc(100%);
-        transform: translateX(-100%);
-      }
-
-      label:active:after {
-        width: 130px;
-      }
+    
     </style>
-    <script src="popup.js"></script>
+    
   </head>
 
   <body>
@@ -189,11 +148,15 @@
                     Are you logged out?
                   </h1>
                  
-                    <input type="checkbox" id="switch" /><label for="switch">Toggle</label><h2 style="font-size: 15px;">Enabled</h2>
+                    
+                    <label class="form-control">
+                      <input type="checkbox" name="checkbox" id="checkbox1" />
+                      Checkbox
+                    </label>
                                 
                   <h1 class="Title">
                   </h1>
-                    <a href="./HTML/List.html" class="btn effect01" target="_blank"><span>Website List</span></a>
+                    <button type="button" class="btn effect01" target="_blank" onclick="save()"><span>save changes</span></button>
                     <br/>
                     <a href="./HTML/Settings.html" class="btn effect01" target="_blank"><span>Options</span></a>
                 </div>
@@ -201,5 +164,6 @@
         
       </div>
     </div>
+    <script src="popup.js"></script>
   </body>
 </html>
