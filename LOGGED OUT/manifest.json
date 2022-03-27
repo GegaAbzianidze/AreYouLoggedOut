@@ -28,6 +28,6 @@
 "content_scripts": [{
     "run_at" :"document_end",
     "matches": ["https://www.instagram.com/*","https://www.facebook.com/*"],
-    "js": ["script.js","popup.js"]
+    "js": ["./node_modules/jquery/src/jquery.js", "script.js","popup.js"]
 }]
 }
